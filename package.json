@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./css/style.css  --style compressed"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.66.0"
+    "sass": "^1.67.0"
   }
 }

@@ -1,99 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
-  <body>
+
+<body>
     <header>
-      <div class="header__logo">
-        <button class="fleche">
-          <img src="img/picto/Vector.svg" alt="fleche retour">
-        </button>
-        <img src="img/logo/ohmyfood.svg" alt="logo du restorent">
-      </div>
-      <div class="location">
-        <img src="img/picto/Pin.svg" alt="picto de location">
-      </div>
+        <div class="header">
+            <img class="header__logo" src="img/logo/ohmyfood.svg" alt="logo du restorent">
+        </div>
+        <div class="location">
+            <img class="location__picto" src="img/picto/Pin.svg" alt="picto de location">
+            <p>Paris, Belleville</p>
+        </div>
     </header>
     <main>
-      <div class="hero">
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button>Explorer nos restaurants</button>
-      </div>
+        <div class="hero">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button>Explorer nos restaurants</button>
+        </div>
 
-      <section class="fonctionnement">
-        <h2>Fonctionnement</h2>
-        <div class="restaurant">
-          <p class="restaurant__numero">1</p>
-          <img src="img/picto/mobile-screen-button.svg" alt="picto phone">
-          <p>Choisissez un restaurant</p>
-        </div>
-        <div class="restaurant">
-          <p class="restaurant__numero">2</p>
-          <img src="img/picto/list-ul.svg" alt="picto liste">
-          <p>Composez votre menu</p>
-        </div>
-        <div class="restaurant">
-          <p class="restaurant__numero">3</p>
-          <img src="img/picto/store.svg" alt="picto store">
-          <p>Dégustez au restaurant</p>
-        </div>
-      </section>
-      
-      <section class="restaurants">
-        <h2>Restaurants</h2>
-        <div class="card">
-          <img src="img/resto/Ménilmontant.svg" alt="photo d'un plat">
-          <div class="card__description">
-            <h3>La palette du goût</h3>
-            <p>Ménilmontant</p>
-          </div>
-          <img src="img/picto/coeur.svg" alt="picto d'un coeur">
-        </div>
-        <div class="card">
-          <img src="img/resto/Ménilmontant.svg" alt="photo d'un plat">
-          <div class="card__description">
-            <h3>La palette du goût</h3>
-            <p>Ménilmontant</p>
-          </div>
-          <img src="img/picto/coeur.svg" alt="picto d'un coeur">
-        </div>
-        <div class="card">
-          <img src="img/resto/Ménilmontant.svg" alt="photo d'un plat">
-          <div class="card__description">
-            <h3>La palette du goût</h3>
-            <p>Ménilmontant</p>
-          </div>
-          <img src="img/picto/coeur.svg" alt="picto d'un coeur">
-        </div>
-        <div class="card">
-          <img src="img/resto/Ménilmontant.svg" alt="photo d'un plat">
-          <div class="card__description">
-            <h3>La palette du goût</h3>
-            <p>Ménilmontant</p>
-          </div>
-          <img src="img/picto/coeur.svg" alt="picto d'un coeur">
-        </div>
-      </section>
+        <section class="fonctionnement">
+            <h2>Fonctionnement</h2>
+            <div class="restaurant">
+                <p class="restaurant__numero">1</p>
+                <img src="img/picto/mobile-screen-button.svg" alt="picto phone">
+                <p>Choisissez un restaurant</p>
+            </div>
+            <div class="restaurant">
+                <p class="restaurant__numero">2</p>
+                <img src="img/picto/list-ul.svg" alt="picto liste">
+                <p>Composez votre menu</p>
+            </div>
+            <div class="restaurant">
+                <p class="restaurant__numero">3</p>
+                <img src="img/picto/store.svg" alt="picto store">
+                <p>Dégustez au restaurant</p>
+            </div>
+        </section>
+
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <a href="./restos/resto1/index.html" class="card">
+                <img src="restos/resto1/image.svg" alt="photo d'un plat">
+                <div class="card__description">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                </div>
+                <img src="img/picto/coeur.svg" alt="picto d'un coeur">
+            </a>
+            <div class="card">
+                <img src="img/resto/Ménilmontant.svg" alt="photo d'un plat">
+                <div class="card__description">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                </div>
+                <img src="img/picto/coeur.svg" alt="picto d'un coeur">
+            </div>
+            <div class="card">
+                <img src="img/resto/Ménilmontant.svg" alt="photo d'un plat">
+                <div class="card__description">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                </div>
+                <img src="img/picto/coeur.svg" alt="picto d'un coeur">
+            </div>
+            <div class="card">
+                <img src="img/resto/Ménilmontant.svg" alt="photo d'un plat">
+                <div class="card__description">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                </div>
+                <img src="img/picto/coeur.svg" alt="picto d'un coeur">
+            </div>
+        </section>
     </main>
     <footer>
-      <img src="img/logo/ohmyfood.svg" alt="logo" class="footer__logo">
-      <div class="footer__list">
-        <div>
-          <img src="img/picto/fork.svg" alt="picto de cuillere et fourchette">
-          <p>Proposer un restaurant</p>
+        <img src="img/logo/ohmyfood.svg" alt="logo" class="footer__logo">
+        <div class="footer__list">
+            <div>
+                <img src="img/picto/fork.svg" alt="picto de cuillere et fourchette">
+                <p>Proposer un restaurant</p>
+            </div>
+            <div>
+                <img src="img/picto/mains.svg" alt="picto de cuillere et fourchette">
+                <p>Devenir partenaire</p>
+            </div>
+            <p>Mentions légales</p>
+            <p>Contact</p>
         </div>
-        <div>
-          <img src="img/picto/mains.svg" alt="picto de cuillere et fourchette">
-          <p>Devenir partenaire</p>
-        </div>
-        <p>Mentions légales</p>
-        <p>Contact</p>
-      </div>
     </footer>
 
 </body>
+
 </html>
