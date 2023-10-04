@@ -1,163 +1,289 @@
-body {
-  font-family: "roboto"
-}
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline
+  vertical-align: baseline;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 body {
-  line-height: 1
+  line-height: 1;
+  background-color: rgb(246, 246, 246);
 }
 
-ol,
-ul {
-  list-style: none
+ol, ul {
+  list-style: none;
 }
 
-blockquote,
-q {
-  quotes: none
+blockquote, q {
+  quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
   content: "";
-  content: none
+  content: none;
 }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0
+  border-spacing: 0;
 }
 
+body {
+  font-family: "roboto";
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 16px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  font-size: 22px;
+}
+
+header {
+  background-color: white;
+}
 header .header {
   display: flex;
-  padding: 14px 18px
+  padding: 14px 18px;
 }
-
 header .header__logo {
   width: 162px;
-  margin: 0 auto
+  margin: 0 auto;
 }
-
 header .location {
   display: flex;
   justify-content: center;
   gap: 18px;
   padding: 18px;
-  background: var(--Grey-2, #EAEAEA)
+  background: rgb(234, 234, 234);
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.192);
 }
-
 header .location__picto {
-  width: 12px
+  width: 12px;
 }
 
 .fleche {
   border: none;
-  background-color: rgba(0, 0, 0, 0);
-  width: 30px
+  background-color: transparent;
+  width: 30px;
+}
+
+button {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 18px;
+  background: linear-gradient(to bottom, rgb(255, 121, 218), rgb(147, 86, 220));
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 218px;
+  margin: auto;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto 60px;
+  gap: 20px;
+  padding: 0 34px;
+}
+.hero p {
+  margin-top: 18px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.fonctionnements {
+  padding: 54px 20px 72px;
+  background-color: white;
+}
+.fonctionnements .fonctionnement {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  align-items: center;
+  position: relative;
+  padding: 28px;
+  margin-left: 12px;
+  border-radius: 20px;
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+.fonctionnements .fonctionnement__numero {
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  padding: 4px 7px;
+  left: -9px;
+  text-align: center;
+  background-color: rgb(147, 86, 220);
+  color: white;
+  min-width: 10px;
+}
+
+.restaurants {
+  padding: 54px 20px 66px;
+}
+.restaurants .card {
+  margin-top: 28px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.restaurants .card img {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  max-height: 100%;
+  max-width: 100%;
+}
+.restaurants .card .card__description {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: white;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.restaurants .card .card__description i {
+  width: 24px;
+  font-size: 24px;
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  padding: 32px;
+}
+footer .footer__list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: white;
+}
+footer .footer__list .list__img {
+  display: flex;
+  gap: 12px;
+}
+
+.resto {
+  background-color: white;
+}
+.resto header {
+  padding: 0;
+}
+.resto header .logo {
+  display: flex;
+  justify-content: center;
+  margin: 14px;
+  position: relative;
+  align-items: center;
+}
+.resto header .logo a {
+  position: absolute;
+  left: 0px;
+  height: 16px;
+}
+.resto header > img {
+  width: 100%;
+}
+
+.resto main {
+  padding: 40px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border: solid 1px green;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.resto main .resto__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resto main .resto__name h1 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0px;
+}
+.resto main .entre {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.resto main .entre h2 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  padding-bottom: 8px;
+  border-bottom: solid 3px rgb(153, 226, 208);
+  border-image: linear-gradient(to right, rgb(153, 226, 208) 40px, transparent 0%) 100% 1;
+}
+.resto main .entre .card {
+  padding: 16px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+.resto main .entre .card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.resto main .entre .card div {
+  display: flex;
+  justify-content: space-between;
+}
+.resto main .entre .card div p {
+  font-weight: 300;
+}
+.resto main .entre .card div .price {
+  font-size: 16px;
+  font-weight: 600;
+}
+.resto main button {
+  padding: 16px 48px;
 }
 
 /*# sourceMappingURL=style.css.map */

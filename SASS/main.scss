@@ -1,9 +1,14 @@
 @import 'base/reset';
 @import 'base/typo.scss';
+@import 'base/general';
 @import 'utils/variable';
 @import 'layouts/header';
 @import 'layouts/nav';
-@import 'layouts/_footer';
 @import 'components/buttons';
 @import 'layouts/hero';
 @import 'layouts/fonctionnement';
+@import 'layouts/restaurants';
+@import 'layouts/_footer';
+
+@import 'restaurant/header.scss';
+@import 'restaurant/main.scss';

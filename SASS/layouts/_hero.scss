@@ -1,16 +1,9 @@
 .hero{
   display: flex;
   flex-direction: column;
-  margin: 40px auto;
+  margin: 40px auto 60px ;
   gap: 20px;
   padding: 0 34px;
-
-  h1{
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    margin: 0 16px;
-  }
 
   p{
     margin-top: 18px;

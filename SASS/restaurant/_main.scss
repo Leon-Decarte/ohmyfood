@@ -1,0 +1,74 @@
+.resto {
+
+    main {
+        padding: 40px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        border: solid 1px green;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+
+        .resto__name {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                font-family: 'Shrikhand';
+                font-size: 28px;
+                font-weight: 400;
+                margin: 0px;
+            }
+        }
+
+
+        .entre {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            h2 {
+                margin: 0;
+                font-weight: 300;
+                font-size: 16px;
+                padding-bottom: 8px;
+                border-bottom: solid 3px rgba(153, 226, 208, 1);
+                border-image: linear-gradient(to right, rgba(153, 226, 208, 1) 40px, transparent 0%) 100% 1;
+            }
+
+            .card {
+                padding: 16px;
+                border-radius: 20px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+
+                h3{
+                    margin-bottom: 8px;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+                div{
+                    display: flex;
+                    justify-content: space-between;
+
+                    p{
+                        font-weight: 300;
+                    }
+
+                    .price{
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        button{
+            padding: 16px 48px;
+        }
+    }
+}

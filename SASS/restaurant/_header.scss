@@ -1,0 +1,30 @@
+
+.resto{
+
+  background-color: white;
+  
+
+  header{
+
+    padding: 0;
+
+    .logo{
+      display: flex;
+      justify-content: center;
+      margin: 14px;
+      position: relative;
+      align-items: center;
+  
+      a{
+        position: absolute;
+        left: 0px;
+        height: 16px;
+      }
+  
+    }
+  
+    > img{
+      width: 100%;
+    }
+  }
+}

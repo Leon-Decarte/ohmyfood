@@ -1,17 +1,36 @@
-.fonctionnement{
+.fonctionnements{
 
-  margin-top: 48px;
+  padding: 54px 20px 72px;
+  background-color: white;
 
-  h2{
-    font-size: 24px;
-    font-weight: 700;
-  }
 
-  .restaurant{
+
+  .fonctionnement{
     display: flex;
     gap: 24px;
     margin-bottom: 24px;
-    margin-top: 26px;
+    align-items: center;
+    position: relative;
+    padding: 28px;
+    margin-left: 12px;
+    border-radius: 20px;
+    background-color: rgba(246, 246, 246, 1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+
+
+
+    &__numero{
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      padding: 4px 7px;
+      left: -9px;
+      text-align: center;
+      background-color: rgba(147, 86, 220, 1);
+      color: white;
+      min-width: 10px;
+    }
+
   }
 
 }
