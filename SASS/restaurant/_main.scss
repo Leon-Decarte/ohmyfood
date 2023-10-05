@@ -1,20 +1,25 @@
 .resto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 
     main {
+        margin: -40px 0px 0px 0px;
         padding: 40px 12px;
         display: flex;
         flex-direction: column;
         gap: 40px;
-        border: solid 1px green;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        top: 270px;
+        background-color: white;
 
 
         .resto__name {
 
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 40px;
 
             h1 {
                 font-family: 'Shrikhand';
@@ -55,8 +60,9 @@
                     display: flex;
                     justify-content: space-between;
 
-                    p{
+                    > p{
                         font-weight: 300;
+                        font-size: 15px;
                     }
 
                     .price{
@@ -71,4 +77,6 @@
             padding: 16px 48px;
         }
     }
+
+
 }
