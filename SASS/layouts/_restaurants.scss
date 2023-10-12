@@ -1,29 +1,49 @@
-.restaurants{
+.restaurants {
 
   padding: 54px 20px 66px;
 
-  .card{
-    margin-top: 28px;
-    margin-bottom: 18px;
+  @media screen and (min-width: 1000px) {
     display: flex;
     flex-direction: column;
+    padding-left: 180px;
+    padding-right: 180px;
+    justify-content: center;
+    align-items: center;
+  }
 
-    img{
-      border-top-left-radius: 18px;
-      border-top-right-radius: 18px;
-      max-height:100%;
-      max-width:100%;
+  .restaurants__1 {
+    @media screen and (min-width: 1000px){
+      flex: 1;
+      display: flex;
+      gap: 100px;
+  
     }
 
-    .card__description{
+    .card {
+      margin-top: 28px;
+      margin-bottom: 18px;
       display: flex;
-      justify-content: space-between;
-      padding: 12px;
-      background-color: white;
-      border-bottom-left-radius: 18px;
-      border-bottom-right-radius: 18px;
+      flex-direction: column;
 
 
+
+      img {
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        height: 174px;
+        object-fit: cover;
+      }
+
+      .card__description {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        background-color: white;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+
+
+      }
     }
   }
 }

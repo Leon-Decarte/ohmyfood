@@ -60,10 +60,21 @@ h1 {
   margin: 0 16px;
 }
 
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 40px;
+  }
+}
 h2 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 26px;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 a {
@@ -116,6 +127,7 @@ button {
   font-weight: 500;
   max-width: 218px;
   margin: auto;
+  cursor: pointer;
 }
 
 .hero {
@@ -137,9 +149,30 @@ button {
 .fonctionnements {
   padding: 54px 20px 72px;
   background-color: white;
+  margin: 0 auto;
 }
-.fonctionnements .fonctionnement {
+@media screen and (min-width: 1000px) {
+  .fonctionnements {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .fonctionnements .fonctionnements__list {
+    display: flex;
+    gap: 24px;
+    max-width: 1080px;
+    justify-content: center;
+  }
+}
+.fonctionnements .fonctionnements__list .fonctionnement {
+  min-width: 222px;
+  max-width: 335px;
   display: flex;
+  flex: 1;
   gap: 24px;
   margin-bottom: 24px;
   align-items: center;
@@ -150,7 +183,7 @@ button {
   background-color: rgb(246, 246, 246);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
-.fonctionnements .fonctionnement__numero {
+.fonctionnements .fonctionnements__list .fonctionnement__numero {
   display: block;
   border-radius: 50%;
   position: absolute;
@@ -165,19 +198,36 @@ button {
 .restaurants {
   padding: 54px 20px 66px;
 }
-.restaurants .card {
+@media screen and (min-width: 1000px) {
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    padding-left: 180px;
+    padding-right: 180px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .restaurants .restaurants__1 {
+    flex: 1;
+    display: flex;
+    gap: 100px;
+  }
+}
+.restaurants .restaurants__1 .card {
   margin-top: 28px;
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
 }
-.restaurants .card img {
+.restaurants .restaurants__1 .card img {
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
-  max-height: 100%;
-  max-width: 100%;
+  height: 174px;
+  object-fit: cover;
 }
-.restaurants .card .card__description {
+.restaurants .restaurants__1 .card .card__description {
   display: flex;
   justify-content: space-between;
   padding: 12px;
@@ -270,11 +320,6 @@ footer .footer__list .list__img {
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-}
-.resto main .entre .card h3 {
-  margin-bottom: 8px;
-  font-size: 18px;
-  font-weight: 500;
 }
 .resto main .entre .card div {
   display: flex;
