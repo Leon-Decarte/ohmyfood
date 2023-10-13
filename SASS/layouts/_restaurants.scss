@@ -5,21 +5,19 @@
   @media screen and (min-width: 1000px) {
     display: flex;
     flex-direction: column;
-    padding-left: 180px;
-    padding-right: 180px;
-    justify-content: center;
-    align-items: center;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
   }
 
   .restaurants__1 {
     @media screen and (min-width: 1000px){
-      flex: 1;
       display: flex;
       gap: 100px;
   
     }
 
     .card {
+      flex: 1;
       margin-top: 28px;
       margin-bottom: 18px;
       display: flex;

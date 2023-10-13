@@ -19,6 +19,11 @@ header {
     padding: 18px;
     background: rgba(234, 234, 234, 1);
     box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.192);
+
+    @media screen and (min-width: 1000px) {
+      box-shadow: none
+    }
+
     &__picto {
       width: 12px;
     }

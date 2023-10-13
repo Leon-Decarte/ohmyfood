@@ -12,13 +12,22 @@
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         top: 270px;
-        background-color: white;
+        background-color: rgba(246, 246, 246, 1);
+
+        @media screen and (min-width: 1000px) {
+            padding-left: 12.5%;
+            padding-right: 12.5%;
+            margin-right: 12.5%;
+            margin-left: 12.5%;
+        }
+
 
 
         .resto__name {
 
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 40px;
 
             h1 {
@@ -50,16 +59,16 @@
                 background-color: rgb(255, 255, 255);
                 box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 
-                div{
+                div {
                     display: flex;
                     justify-content: space-between;
 
-                    > p{
+                    >p {
                         font-weight: 300;
                         font-size: 15px;
                     }
 
-                    .price{
+                    .price {
                         font-size: 16px;
                         font-weight: 600;
                     }
@@ -67,7 +76,7 @@
             }
         }
 
-        button{
+        button {
             padding: 16px 48px;
         }
     }
