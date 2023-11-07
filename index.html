@@ -22,9 +22,15 @@
 </head>
 
 <body>
+    <div class="back__load">
+        <div class="loader"></div>
+    </div>
+
     <header>
         <div class="header">
-            <img class="header__logo" src="img/logo/ohmyfood.svg" alt="logo du restorent">
+            <p class="header__logo">
+                ohmyfood
+            </p>
         </div>
         <div class="location">
             <img class="location__picto" src="img/picto/Pin.svg" alt="picto de location">
@@ -69,7 +75,10 @@
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="hearts">
+                            <i class="fa-regular fa-heart heart"></i>
+                            <i class="fa-solid fa-heart heart-fill"></i>
+                        </div>
                     </div>
                 </a>
                 <a href="./restos/resto2/index.html" class="card">
@@ -79,7 +88,10 @@
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="hearts">
+                            <i class="fa-regular fa-heart heart"></i>
+                            <i class="fa-solid fa-heart heart-fill"></i>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -91,7 +103,10 @@
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="hearts">
+                            <i class="fa-regular fa-heart heart"></i>
+                            <i class="fa-solid fa-heart heart-fill"></i>
+                        </div>
                     </div>
                 </a>
                 <a href="./restos/resto1/index.html" class="card">
@@ -101,26 +116,38 @@
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="hearts">
+                            <i class="fa-regular fa-heart heart"></i>
+                            <i class="fa-solid fa-heart heart-fill"></i>
+                        </div>
                     </div>
                 </a>
             </div>
         </section>
     </main>
     <footer>
-        <p>ohmyfood</p>
-        <div class="footer__list">
+        <a href="#">
+            <p class="footer__logo">ohmyfood</p>
+        </a>
+        <a href="#">
             <div class="list__img">
                 <img src="img/picto/fork.svg" alt="picto de cuillere et fourchette">
                 <p>Proposer un restaurant</p>
             </div>
+        </a>
+        <a href="#">
             <div class="list__img">
                 <img src="img/picto/mains.svg" alt="picto de cuillere et fourchette">
                 <p>Devenir partenaire</p>
             </div>
+        </a>
+        <a href="#">
             <p>Mentions légales</p>
+        </a>
+        <a href="#">
             <p>Contact</p>
-        </div>
+        </a>
+
     </footer>
 
 </body>

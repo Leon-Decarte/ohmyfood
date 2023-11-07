@@ -5,10 +5,11 @@ header {
 
     display: flex;
     padding: 14px 18px;
+    justify-content: center;
 
     &__logo {
-      width: 162px;
-      margin: 0 auto;
+      font-family: Shrikhand;
+      font-size: 30px;
     }
   }
 

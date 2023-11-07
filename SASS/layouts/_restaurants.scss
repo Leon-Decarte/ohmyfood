@@ -9,39 +9,176 @@
     padding-right: 12.5%;
   }
 
+
   .restaurants__1 {
-    @media screen and (min-width: 1000px){
+    @media screen and (min-width: 1000px) {
       display: flex;
       gap: 100px;
-  
     }
+
 
     .card {
       flex: 1;
       margin-top: 28px;
-      margin-bottom: 18px;
       display: flex;
       flex-direction: column;
+    }
 
 
 
-      img {
-        border-top-left-radius: 18px;
-        border-top-right-radius: 18px;
-        height: 174px;
-        object-fit: cover;
+
+
+    img {
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      height: 174px;
+      object-fit: cover;
+    }
+
+    .card__description {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      background-color: white;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+
+
+    }
+  }
+}
+
+
+.resto {
+
+  &__name{
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
       }
 
-      .card__description {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px;
-        background-color: white;
-        border-bottom-left-radius: 18px;
-        border-bottom-right-radius: 18px;
+      to {
+        opacity: 1;
+      }
+    }
 
+
+    .entre {
+      margin-bottom: 2.25em;
+      animation: fadein 1s linear;
+      animation-delay: 0.5s;
+      animation-fill-mode: both;
+    }
+
+    .plats {
+      margin-bottom: 2.25em;
+      animation: fadein 1s linear;
+      animation-delay: 1s;
+      animation-fill-mode: both;
+    }
+
+    .dessert {
+      margin-bottom: 2.25em;
+      animation: fadein 1s linear;
+      animation-delay: 1.5s;
+      animation-fill-mode: both;
+    }
+
+    section {
+
+      @keyframes tile-apparition {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      }
+
+      .card {
+
+        position: relative;
+          width: 100%;
+          transition: 0.8s ease-in-out;
+        &:hover{
+          width: calc(100% - 100px);
+          transition: 0.7s ease-in-out;
+
+      }
+
+
+        .entre:nth-child(1) {
+          animation: tile-apparition 2s;
+          animation-fill-mode: forwards;
+          animation-delay: 700ms;
+        }
+
+        .card:nth-child(2) {
+          animation: tile-apparition 2s;
+          animation-fill-mode: forwards;
+          animation-delay: 900ms;
+        }
+
+        .card:nth-child(3) {
+          animation: tile-apparition 2s;
+          animation-fill-mode: forwards;
+          animation-delay: 1100ms;
+        }
+
+        .card:nth-child(4) {
+          animation: tile-apparition 2s;
+          animation-fill-mode: forwards;
+          animation-delay: 1300ms;
+        }
 
       }
     }
   }
 }
+
+.menu-card_validate {
+  position: absolute;
+  right: -100px;
+  top: 0;
+  width: 100px;
+  height: 74px;
+  background-color: rgb(131, 253, 131);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s ease-in-out;
+
+  i {
+    color: #fff;
+    font-size: 3.5em;
+    margin: 0 auto;
+    
+  }
+
+  &:hover {
+    cursor: pointer;
+    transition: 0.7s ease-in-out;
+    z-index: 2;
+  
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+

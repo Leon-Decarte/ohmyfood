@@ -92,10 +92,11 @@ header {
 header .header {
   display: flex;
   padding: 14px 18px;
+  justify-content: center;
 }
 header .header__logo {
-  width: 162px;
-  margin: 0 auto;
+  font-family: Shrikhand;
+  font-size: 30px;
 }
 header .location {
   display: flex;
@@ -123,16 +124,20 @@ header .location__picto {
 button {
   flex: 1;
   border: none;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   padding: 18px;
   background: linear-gradient(to bottom, rgb(255, 121, 218), rgb(147, 86, 220));
   color: white;
   font-size: 16px;
   font-weight: 500;
-  max-width: 218px;
   margin: auto;
   cursor: pointer;
+  transition: 500ms;
+}
+button:hover {
+  background: linear-gradient(to bottom, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  box-shadow: 1px 8px 14px 0px rgba(109, 109, 109, 0.6);
 }
 
 .hero {
@@ -159,21 +164,19 @@ button {
 }
 @media screen and (min-width: 1000px) {
   .fonctionnements {
-    display: flex;
     justify-content: center;
-    flex-direction: column;
     padding-left: 12.5%;
     padding-right: 12.5%;
   }
 }
 @media screen and (min-width: 1000px) {
-  .fonctionnements .fonctionnements__list {
+  .fonctionnements__list {
     display: flex;
     gap: 24px;
     justify-content: center;
   }
 }
-.fonctionnements .fonctionnements__list .fonctionnement {
+.fonctionnements__list .fonctionnement {
   display: flex;
   flex: 1;
   gap: 24px;
@@ -186,7 +189,7 @@ button {
   background-color: rgb(246, 246, 246);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
-.fonctionnements .fonctionnements__list .fonctionnement__numero {
+.fonctionnements__list .fonctionnement__numero {
   display: block;
   border-radius: 50%;
   position: absolute;
@@ -218,17 +221,16 @@ button {
 .restaurants .restaurants__1 .card {
   flex: 1;
   margin-top: 28px;
-  margin-bottom: 18px;
   display: flex;
   flex-direction: column;
 }
-.restaurants .restaurants__1 .card img {
+.restaurants .restaurants__1 img {
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
   height: 174px;
   object-fit: cover;
 }
-.restaurants .restaurants__1 .card .card__description {
+.restaurants .restaurants__1 .card__description {
   display: flex;
   justify-content: space-between;
   padding: 12px;
@@ -237,49 +239,242 @@ button {
   border-bottom-right-radius: 18px;
 }
 
+.resto__name {
+  display: flex;
+  justify-content: center;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.resto main .entre {
+  margin-bottom: 2.25em;
+  animation: fadein 1s linear;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.resto main .plats {
+  margin-bottom: 2.25em;
+  animation: fadein 1s linear;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.resto main .dessert {
+  margin-bottom: 2.25em;
+  animation: fadein 1s linear;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+@keyframes tile-apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.resto main section .card {
+  position: relative;
+  width: 100%;
+  transition: 0.8s ease-in-out;
+}
+.resto main section .card:hover {
+  width: calc(100% - 100px);
+  transition: 0.7s ease-in-out;
+}
+.resto main section .card .entre:nth-child(1) {
+  animation: tile-apparition 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 700ms;
+}
+.resto main section .card .card:nth-child(2) {
+  animation: tile-apparition 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 900ms;
+}
+.resto main section .card .card:nth-child(3) {
+  animation: tile-apparition 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1100ms;
+}
+.resto main section .card .card:nth-child(4) {
+  animation: tile-apparition 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1300ms;
+}
+
+.menu-card_validate {
+  position: absolute;
+  right: -100px;
+  top: 0;
+  width: 100px;
+  height: 74px;
+  background-color: rgb(131, 253, 131);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s ease-in-out;
+}
+.menu-card_validate i {
+  color: #fff;
+  font-size: 3.5em;
+  margin: 0 auto;
+}
+.menu-card_validate:hover {
+  cursor: pointer;
+  transition: 0.7s ease-in-out;
+  z-index: 2;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 footer {
   background-color: rgb(53, 53, 53);
   padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 }
-@media screen and (min-width: 1000px) {
-  footer {
-    flex-direction: row;
-    justify-content: end;
-  }
-}
-footer p {
+footer .footer__logo {
   font-family: Shrikhand;
   color: white;
   font-size: 18px;
 }
-@media screen and (min-width: 1000px) {
-  footer p {
-    order: 2;
-  }
-}
-footer .footer__list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+footer p {
+  font-family: roboto;
   color: white;
 }
-@media screen and (min-width: 1000px) {
-  footer .footer__list {
-    order: 1;
-    flex-direction: row;
-  }
-}
-footer .footer__list p {
-  font-family: roboto;
-}
-footer .footer__list .list__img {
+footer .list__img {
   display: flex;
   gap: 12px;
 }
+footer a {
+  border-bottom: solid 2px rgba(255, 192, 203, 0);
+  transition: all 0.5s ease-in-out;
+}
+footer a:hover {
+  border-bottom: solid 2px rgb(220, 86, 213);
+}
 
+.back__load {
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes hideDiv {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.back__load {
+  animation: hideDiv 1s 2s forwards;
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  border-right: 4px solid rgb(147, 86, 220);
+  border-radius: 100%;
+  animation: spinRight 800ms linear infinite;
+}
+.loader:before, .loader:after {
+  content: "";
+  width: 6vmax;
+  height: 6vmax;
+  display: block;
+  position: absolute;
+  top: calc(50% - 3vmax);
+  left: calc(50% - 3vmax);
+  border-left: 3px solid #ff79da;
+  border-radius: 100%;
+  animation: spinLeft 800ms linear infinite;
+}
+.loader:after {
+  width: 4vmax;
+  height: 4vmax;
+  top: calc(50% - 2vmax);
+  left: calc(50% - 2vmax);
+  border: 0;
+  border-right: 2px solid rgb(153, 226, 208);
+  animation: none;
+}
+
+@keyframes spinLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes spinRight {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.heart {
+  font-size: 1.5em;
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.heart:hover + .heart-fill {
+  animation: heart_scale 1000ms ease-out forwards;
+}
+
+.heart-fill {
+  position: absolute;
+  z-index: 1;
+  color: black;
+  font-size: 1.5em;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  cursor: pointer;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+}
+
+.hearts {
+  position: relative;
+  width: 30px;
+}
+
+@keyframes heart_scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .resto {
   background-color: white;
 }
@@ -332,7 +527,6 @@ footer .footer__list .list__img {
 }
 .resto main .resto__name {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 40px;
 }
@@ -356,6 +550,7 @@ footer .footer__list .list__img {
   border-image: linear-gradient(to right, rgb(153, 226, 208) 40px, transparent 0%) 100% 1;
 }
 .resto main .entre .card {
+  overflow: hidden;
   padding: 16px;
   border-radius: 20px;
   background-color: rgb(255, 255, 255);

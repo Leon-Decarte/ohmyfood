@@ -4,44 +4,33 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 
-    @media screen and (min-width: 1000px) {
-        flex-direction: row;
-        justify-content: end;
+
+    .footer__logo {
+        font-family: Shrikhand;
+        color: white;
+        font-size: 18px;
     }
 
 
     p {
-        font-family: Shrikhand;
+        font-family: roboto;
         color: white;
-        font-size: 18px;
-
-        @media screen and (min-width: 1000px) {
-            order: 2;
-        }
     }
 
-
-    .footer__list {
-
+    .list__img {
         display: flex;
-        flex-direction: column;
         gap: 12px;
-        color: white;
-
-        @media screen and (min-width: 1000px) {
-            order: 1;
-            flex-direction: row;
-        }
-
-        p{
-            font-family: roboto;
-        }
-
-        .list__img {
-            display: flex;
-            gap: 12px;
-        }
     }
 
+    a {
+        border-bottom: solid 2px rgba(255, 192, 203, 0) ;
+        transition: all .5s ease-in-out;
+
+
+        &:hover{
+            border-bottom: solid 2px rgb(220, 86, 213) ;
+        }
+    }
 }

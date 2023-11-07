@@ -36,7 +36,10 @@
 
         <div class="resto__name">
             <h1>La palette du goût</h1>
-            <i class="fa-regular fa-heart"></i>
+            <div class="hearts">
+                <i class="fa-regular fa-heart heart"></i>
+                <i class="fa-solid fa-heart heart-fill"></i>
+            </div>
 
         </div>
         <section class="entre">
@@ -47,6 +50,10 @@
                     <p>Au piment d'Espelette</p>
                     <p class="price">25€</p>
                 </div>
+                <div class="menu-card_validate">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+
             </div>
             <div class="card">
                 <h3>Foie gras de canard mi-cuit</h3>
@@ -64,7 +71,7 @@
             </div>
         </section>
 
-        <section class="entre">
+        <section class="entre plats">
             <h2>PLATS</h2>
             <div class="card">
                 <h3>Filet de bœuf aux herbes</h3>
@@ -88,7 +95,7 @@
                 </div>
             </div>
         </section>
-        <section class="entre">
+        <section class="entre dessert">
             <h2>DESSERT</h2>
             <div class="card">
                 <h3>Paris-Brest</h3>
@@ -117,19 +124,28 @@
     </main>
 
     <footer>
-        <p>ohmyfood</p>
-        <div class="footer__list">
+        <a href="#">
+            <p class="footer__logo">ohmyfood</p>
+        </a>
+        <a href="#">
             <div class="list__img">
                 <img src="/img/picto/fork.svg" alt="picto de cuillere et fourchette">
                 <p>Proposer un restaurant</p>
             </div>
+        </a>
+        <a href="#">
             <div class="list__img">
                 <img src="/img/picto/mains.svg" alt="picto de cuillere et fourchette">
                 <p>Devenir partenaire</p>
             </div>
+        </a>
+        <a href="#">
             <p>Mentions légales</p>
+        </a>
+        <a href="#">
             <p>Contact</p>
-        </div>
+        </a>
+
     </footer>
 
 

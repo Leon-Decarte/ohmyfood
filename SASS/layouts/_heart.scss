@@ -1,0 +1,39 @@
+
+.heart {
+  font-size: 1.5em;
+  position:absolute;
+  z-index:1;
+  background-color: transparent;
+}
+
+.heart:hover + .heart-fill {
+  animation: heart_scale 1000ms ease-out forwards;
+}
+
+.heart-fill{
+  position:absolute;
+  z-index:1;
+  color:black;
+  font-size: 1.5em;
+  background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  cursor: pointer;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color:transparent;
+  transform: scale(0);
+}
+
+.hearts{
+  position:relative;
+  width: 30px;
+}
+
+@keyframes heart_scale {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
