@@ -4,24 +4,23 @@
   background-color: white;
 
   header{
-    padding: -40px 0px 0px 0px;
-
+    
     .logo{
       display: flex;
       justify-content: center;
       margin: 14px;
       position: relative;
       align-items: center;
-  
+
       a{
         position: absolute;
         left: 0px;
         height: 16px;
         z-index: 2;
       }
-  
+
     }
-  
+
     > img{
       width: 100%;
       height: auto;

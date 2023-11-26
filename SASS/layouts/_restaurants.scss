@@ -1,184 +1,206 @@
 .restaurants {
 
-  padding: 54px 20px 66px;
-
-  @media screen and (min-width: 1000px) {
+    padding: 54px 20px 66px;
     display: flex;
     flex-direction: column;
-    padding-left: 12.5%;
-    padding-right: 12.5%;
-  }
+    gap: 50px;
 
-
-  .restaurants__1 {
-    @media screen and (min-width: 1000px) {
-      display: flex;
-      gap: 100px;
+    @media screen and (min-width: 768px) {
+        padding-left: 12.5%;
+        padding-right: 12.5%;
     }
 
 
-    .card {
-      flex: 1;
-      margin-top: 28px;
-      display: flex;
-      flex-direction: column;
+    .restaurants__1 {
+
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @media screen and (min-width: 768px) {
+            gap: 50px;
+            flex-direction: row;
+        }
+
+
+        .card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+            position: relative;
+        }
+
+
+
+        .card__blinker {
+            background-color: #99e2d0;
+            padding: 6px 8px;
+            position: absolute;
+            color: rgba(0, 135, 102, 1);
+            border-radius: 4px;
+            font-size: 14px;
+            right: 16px;
+            top: 16px;
+        }
+
+        img {
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            height: 174px;
+            object-fit: cover;
+        }
+
+        .card__description {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            background-color: white;
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+
+
+        }
     }
-
-
-
-
-
-    img {
-      border-top-left-radius: 18px;
-      border-top-right-radius: 18px;
-      height: 174px;
-      object-fit: cover;
-    }
-
-    .card__description {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px;
-      background-color: white;
-      border-bottom-left-radius: 18px;
-      border-bottom-right-radius: 18px;
-
-
-    }
-  }
 }
 
 
 .resto {
 
-  &__name{
+    &__name {
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .entre {
+            margin-bottom: 2.25em;
+            animation: fadein 1s linear;
+            animation-delay: 0.5s;
+            animation-fill-mode: both;
+        }
+
+        .plats {
+            margin-bottom: 2.25em;
+            animation: fadein 1s linear;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+        }
+
+        .dessert {
+            margin-bottom: 2.25em;
+            animation: fadein 1s linear;
+            animation-delay: 1.5s;
+            animation-fill-mode: both;
+        }
+
+        section {
+
+            @keyframes title-apparition {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+
+            .card {
+
+                .entre:nth-child(1) {
+                    animation: title-apparition 2s;
+                    animation-fill-mode: forwards;
+                    animation-delay: 700ms;
+                }
+
+                .card:nth-child(2) {
+                    animation: title-apparition 2s;
+                    animation-fill-mode: forwards;
+                    animation-delay: 900ms;
+                }
+
+                .card:nth-child(3) {
+                    animation: title-apparition 2s;
+                    animation-fill-mode: forwards;
+                    animation-delay: 1100ms;
+                }
+
+                .card:nth-child(4) {
+                    animation: title-apparition 2s;
+                    animation-fill-mode: forwards;
+                    animation-delay: 1300ms;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+.dish__checkbox {
     display: flex;
     justify-content: center;
-  }
-
-  main {
-
-    @keyframes fadein {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-
-    .entre {
-      margin-bottom: 2.25em;
-      animation: fadein 1s linear;
-      animation-delay: 0.5s;
-      animation-fill-mode: both;
-    }
-
-    .plats {
-      margin-bottom: 2.25em;
-      animation: fadein 1s linear;
-      animation-delay: 1s;
-      animation-fill-mode: both;
-    }
-
-    .dessert {
-      margin-bottom: 2.25em;
-      animation: fadein 1s linear;
-      animation-delay: 1.5s;
-      animation-fill-mode: both;
-    }
-
-    section {
-
-      @keyframes tile-apparition {
-        0% {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-      }
-
-      .card {
-
-        position: relative;
-          width: 100%;
-          transition: 0.8s ease-in-out;
-        &:hover{
-          width: calc(100% - 100px);
-          transition: 0.7s ease-in-out;
-
-      }
-
-
-        .entre:nth-child(1) {
-          animation: tile-apparition 2s;
-          animation-fill-mode: forwards;
-          animation-delay: 700ms;
-        }
-
-        .card:nth-child(2) {
-          animation: tile-apparition 2s;
-          animation-fill-mode: forwards;
-          animation-delay: 900ms;
-        }
-
-        .card:nth-child(3) {
-          animation: tile-apparition 2s;
-          animation-fill-mode: forwards;
-          animation-delay: 1100ms;
-        }
-
-        .card:nth-child(4) {
-          animation: tile-apparition 2s;
-          animation-fill-mode: forwards;
-          animation-delay: 1300ms;
-        }
-
-      }
-    }
-  }
-}
-
-.menu-card_validate {
-  position: absolute;
-  right: -100px;
-  top: 0;
-  width: 100px;
-  height: 74px;
-  background-color: rgb(131, 253, 131);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.7s ease-in-out;
-
-  i {
+    align-items: center;
     color: #fff;
-    font-size: 3.5em;
-    margin: 0 auto;
-    
-  }
+    background: #99e2d0;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
 
-  &:hover {
-    cursor: pointer;
-    transition: 0.7s ease-in-out;
-    z-index: 2;
-  
-  }
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
 }
 
+.card:hover .dish__checkbox {
+
+    transform-origin: right;
+    animation: checkbox_scale .6s ease-in-out;
+    width: 20%;
+}
+
+
+.card__text {
+    width: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.card:hover .card__text {
+    width: 80%;
+
+}
+
+
+@keyframes checkbox_scale {
+    0% {
+        transform: scaleX(0)
+    }
+
+    100% {
+        transform: scaleX(1)
+    }
+}

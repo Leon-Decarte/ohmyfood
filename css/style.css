@@ -60,7 +60,7 @@ h1 {
   margin: 0 16px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 40px;
   }
@@ -162,7 +162,7 @@ button:hover {
   padding: 54px 20px 72px;
   background-color: white;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   .fonctionnements {
     justify-content: center;
     padding-left: 12.5%;
@@ -203,26 +203,46 @@ button:hover {
 
 .restaurants {
   padding: 54px 20px 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   .restaurants {
-    display: flex;
-    flex-direction: column;
     padding-left: 12.5%;
     padding-right: 12.5%;
   }
 }
-@media screen and (min-width: 1000px) {
+.restaurants .restaurants__1 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+@media screen and (min-width: 768px) {
   .restaurants .restaurants__1 {
-    display: flex;
-    gap: 100px;
+    gap: 50px;
+    flex-direction: row;
   }
 }
 .restaurants .restaurants__1 .card {
   flex: 1;
-  margin-top: 28px;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  position: relative;
+}
+.restaurants .restaurants__1 .card__blinker {
+  background-color: #99e2d0;
+  padding: 6px 8px;
+  position: absolute;
+  color: rgb(0, 135, 102);
+  border-radius: 4px;
+  font-size: 14px;
+  right: 16px;
+  top: 16px;
 }
 .restaurants .restaurants__1 img {
   border-top-left-radius: 18px;
@@ -269,7 +289,7 @@ button:hover {
   animation-delay: 1.5s;
   animation-fill-mode: both;
 }
-@keyframes tile-apparition {
+@keyframes title-apparition {
   0% {
     opacity: 0;
     transform: translateY(50px);
@@ -279,67 +299,68 @@ button:hover {
     transform: translateY(0);
   }
 }
-.resto main section .card {
-  position: relative;
-  width: 100%;
-  transition: 0.8s ease-in-out;
-}
-.resto main section .card:hover {
-  width: calc(100% - 100px);
-  transition: 0.7s ease-in-out;
-}
 .resto main section .card .entre:nth-child(1) {
-  animation: tile-apparition 2s;
+  animation: title-apparition 2s;
   animation-fill-mode: forwards;
   animation-delay: 700ms;
 }
 .resto main section .card .card:nth-child(2) {
-  animation: tile-apparition 2s;
+  animation: title-apparition 2s;
   animation-fill-mode: forwards;
   animation-delay: 900ms;
 }
 .resto main section .card .card:nth-child(3) {
-  animation: tile-apparition 2s;
+  animation: title-apparition 2s;
   animation-fill-mode: forwards;
   animation-delay: 1100ms;
 }
 .resto main section .card .card:nth-child(4) {
-  animation: tile-apparition 2s;
+  animation: title-apparition 2s;
   animation-fill-mode: forwards;
   animation-delay: 1300ms;
 }
 
-.menu-card_validate {
-  position: absolute;
-  right: -100px;
-  top: 0;
-  width: 100px;
-  height: 74px;
-  background-color: rgb(131, 253, 131);
+.dish__checkbox {
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: 0.7s ease-in-out;
-}
-.menu-card_validate i {
+  align-items: center;
   color: #fff;
-  font-size: 3.5em;
-  margin: 0 auto;
-}
-.menu-card_validate:hover {
-  cursor: pointer;
-  transition: 0.7s ease-in-out;
-  z-index: 2;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
+  background: #99e2d0;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  right: 0;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
 }
 
+.card:hover .dish__checkbox {
+  transform-origin: right;
+  animation: checkbox_scale 0.6s ease-in-out;
+  width: 20%;
+}
+
+.card__text {
+  width: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.card:hover .card__text {
+  width: 80%;
+}
+
+@keyframes checkbox_scale {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 footer {
   background-color: rgb(53, 53, 53);
   padding: 32px;
@@ -478,9 +499,6 @@ footer a:hover {
 .resto {
   background-color: white;
 }
-.resto header {
-  padding: -40px 0px 0px 0px;
-}
 .resto header .logo {
   display: flex;
   justify-content: center;
@@ -536,12 +554,12 @@ footer a:hover {
   font-weight: 400;
   margin: 0px;
 }
-.resto main .entre {
+.resto main .entre, .resto main .plats, .resto main .dessert {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.resto main .entre h2 {
+.resto main .entre h2, .resto main .plats h2, .resto main .dessert h2 {
   margin: 0;
   font-weight: 300;
   font-size: 16px;
@@ -549,22 +567,33 @@ footer a:hover {
   border-bottom: solid 3px rgb(153, 226, 208);
   border-image: linear-gradient(to right, rgb(153, 226, 208) 40px, transparent 0%) 100% 1;
 }
-.resto main .entre .card {
-  overflow: hidden;
-  padding: 16px;
+.resto main .entre .card, .resto main .plats .card, .resto main .dessert .card {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
-.resto main .entre .card div {
+.resto main .entre .card .card__visible, .resto main .plats .card .card__visible, .resto main .dessert .card .card__visible {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.resto main .entre .card .card__text, .resto main .plats .card .card__text, .resto main .dessert .card .card__text {
   display: flex;
   justify-content: space-between;
 }
-.resto main .entre .card div > p {
+.resto main .entre .card .card__text > .card__text__description, .resto main .plats .card .card__text > .card__text__description, .resto main .dessert .card .card__text > .card__text__description {
   font-weight: 300;
   font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.resto main .entre .card div .price {
+.resto main .entre .card .card__text .price, .resto main .plats .card .card__text .price, .resto main .dessert .card .card__text .price {
   font-size: 16px;
   font-weight: 600;
 }

@@ -28,87 +28,159 @@
             <a href="./../../index.html"><img src="/img/picto/Vector.svg" alt="fleche retour"></a>
             <img src="/img/logo/ohmyfood.svg" alt="logo">
         </div>
-        <img src="./image.svg" alt="img of restorent">
+        <img src="image.svg" alt="img of restorent">
     </header>
 
 
     <main>
 
         <div class="resto__name">
-            <h1>Le délice des sens</h1>
-            <i class="fa-regular fa-heart"></i>
+            <h1>La note enchantée</h1>
+            
+            <div class="hearts">
+                <i class="fa-regular fa-heart heart"></i>
+                <i class="fa-solid fa-heart heart-fill"></i>
+            </div>
 
         </div>
-        <section class="entre">
-            <h2>ENTRÉES</h2>
-            <div class="card">
-                <h3>Tartare de thon</h3>
-                <div>
-                    <p>Assaisonné au yuzu</p>
-                    <p class="price">25€</p>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Bouchée de homard croustillant </h3>
-                <div>
-                    <p>Et sa farandole de petits légumes</p>
-                    <p class="price">35€</p>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Poulet rôti aux herbes de Provence</h3>
-                <div>
-                    <p>Et sa crème de truffe</p>
-                    <p class="price">40€</p>
-                </div>
-            </div>
-        </section>
 
         <section class="entre">
-            <h2>PLATS</h2>
+            <h2>ENTRÉES</h2>
+
             <div class="card">
-                <h3>Poulet rôti aux herbes de Provence</h3>
-                <div>
-                    <p>Et sa crème de truffe</p>
-                    <p class="price">40€</p>
+                <div class="card__visible">
+                    <h3>Ravioles de foie gras </h3>
+                    <div class="card__text">
+                        <p class="card__text__description">Accompagnées de leur crème à la truffe</p>
+                        <p class="price">25€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
                 </div>
             </div>
+
             <div class="card">
-                <h3>Langouste rôtie</h3>
-                <div>
-                    <p>Et ses légumes de saison</p>
-                    <p class="price">35€</p>
+                <div class="card__visible">
+                    <h3>Caviar osciètre </h3>
+                    <div class="card__text">
+                        <p>Sur blini à la farine de blé noir</p>
+                        <p class="price">35€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
                 </div>
             </div>
+
             <div class="card">
-                <h3>Côte de bœuf Angus</h3>
-                <div>
-                    <p>Et sa purée de panais</p>
-                    <p class="price">44€</p>
+                <div class="card__visible">
+                    <h3>Homard et espuma de potiron</h3>
+                    <div class="card__text">
+                        <p>Marinés aux zestes d'orange</p>
+                        <p class="price">20€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
                 </div>
             </div>
+
+            <div class="card">
+                <div class="card__visible">
+                    <h3>Foie gras de canard cuit entier</h3>
+                    <div class="card__text">
+                        <p>Confiture de figue et pain toasté</p>
+                        <p class="price">35€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
+                </div>
+            </div>
+
         </section>
-        <section class="entre">
+
+        <section class="entre plats">
+            <h2>PLATS</h2>
+
+
+            <div class="card">
+                <div class="card__visible">
+                    <h3>Noix de coquilles Saint-Jacques</h3>
+                    <div class="card__text">
+                        <p>Sur lit de purée de céleri-rave</p>
+                        <p class="price">40€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__visible">
+                    <h3>Langoustine poêlée</h3>
+                    <div class="card__text">
+                        <p>Purée de patate douce</p>
+                        <p class="price">35€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__visible">
+                    <h3>Mijoté de queue de bœuf </h3>
+                    <div class="card__text">
+                        <p>Et riz sauvage aux zestes de citron</p>
+                        <p class="price">45€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
+                </div>
+            </div>
+
+        </section>
+        <section class="entre dessert">
             <h2>DESSERT</h2>
             <div class="card">
-                <h3>Œuf au plat</h3>
-                <div>
-                    <p>Assaisonné à la truffe sur lit de caviar</p>
-                    <p class="price">76€</p>
+                <div class="card__visible">
+                    <h3>Macaron noisette et chocolat</h3>
+                    <div class="card__text">
+                        <p>Glace au caramel brun et sel de Guérande</p>
+                        <p class="price">18€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__visible">
+                    <h3>Baba au rhum revisité</h3>
+                    <div class="card__text">
+                        <p>Avec son coulis de citron</p>
+                        <p class="price">22€</p>
+                    </div>
+                </div>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
                 </div>
             </div>
             <div class="card">
-                <h3>Crème brulée </h3>
-                <div>
-                    <p>Revisitée</p>
-                    <p class="price">22€</p>
+                <div class="card__visible">
+                    <h3>Tarte au citron meringuée</h3>
+                    <div class="card__text">
+                        <p>Déstructurée</p>
+                        <p class="price">23€</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <h3>Tiramisu</h3>
-                <div>
-                    <p>À la noisette</p>
-                    <p class="price">23€</p>
+                <div class="dish__checkbox">
+                    <span><i class="fas fa-check-circle"></i></span>
                 </div>
             </div>
         </section>
@@ -117,19 +189,28 @@
     </main>
 
     <footer>
-        <img src="/img/logo/ohmyfoodwhite.svg" alt="logo" class="footer__logo">
-        <div class="footer__list">
+        <a href="#">
+            <p class="footer__logo">ohmyfood</p>
+        </a>
+        <a href="#">
             <div class="list__img">
                 <img src="/img/picto/fork.svg" alt="picto de cuillere et fourchette">
                 <p>Proposer un restaurant</p>
             </div>
+        </a>
+        <a href="#">
             <div class="list__img">
                 <img src="/img/picto/mains.svg" alt="picto de cuillere et fourchette">
                 <p>Devenir partenaire</p>
             </div>
+        </a>
+        <a href="#">
             <p>Mentions légales</p>
+        </a>
+        <a href="#">
             <p>Contact</p>
-        </div>
+        </a>
+
     </footer>
 
 
